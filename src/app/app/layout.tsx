@@ -1,6 +1,7 @@
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import Header from "@/components/header";
+import { Toaster } from "@/components/ui/toaster";
 
 
 export default async function AppLayout({
@@ -20,6 +21,7 @@ export default async function AppLayout({
         <div>
             <Header />
             {children}
+            <Toaster />
         </div>
     )
 }

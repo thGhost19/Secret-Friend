@@ -4,7 +4,7 @@ import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/c
 import {Separator} from "@/components/ui/separator";
 import {TextRevealCard, TextRevealCardTitle} from "@/components/ui/text-reveal-card";
 
-export default async function GroupIdPage({params}: { params: { id: string } }) {
+export default async function GroupIdPage({params}: { params: Promise<{ id: string }> }) {
     const supabase = await createClient();
     const {data: authUser} = await supabase.auth.getUser();
 

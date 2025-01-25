@@ -71,7 +71,8 @@ export default function NewGroupForm({
                 description: state.success,
             })
         }
-    }, [state, toast])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [state])
 
     return (
         <Card className={"w-full max-w-2xl mx-auto"}>
